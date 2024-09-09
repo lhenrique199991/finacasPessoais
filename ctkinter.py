@@ -148,7 +148,7 @@ tipo_menu.pack(pady=10)
 historico_text = ctk.CTkTextbox(historico_frame, width=600, height=300, state='disabled')
 historico_text.pack(padx=10, pady=10, fill="both", expand=True)
 
-voltar_btn = ctk.CTkButton(historico_frame, text="Voltar ao Início", command=voltar_para_principal)
+voltar_btn = ctk.CTkButton(historico_frame, text="Voltar", command=voltar_para_principal)
 voltar_btn.pack(pady=10)
 
 # Tela de formulário
