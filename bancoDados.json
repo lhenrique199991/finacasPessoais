@@ -1,21 +1,4 @@
 {
-    "receitas": [
-        {
-            "tipo": "salário",
-            "valor": 2000.0,
-            "data": "08/09/2024"
-        }
-    ],
-    "despesas": [
-        {
-            "tipo": "aluguel",
-            "valor": 500.0,
-            "data": "08/09/2024"
-        },
-        {
-            "tipo": "agua",
-            "valor": 500.0,
-            "data": "08/09/2024"
-        }
-    ]
+    "receitas": [],
+    "despesas": []
 }
