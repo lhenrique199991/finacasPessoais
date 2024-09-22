@@ -25,14 +25,29 @@ def excluir_lista(tipo, tipo1, baseDados):
         json.dump(baseDados, arquivo, ensure_ascii=False, indent=4)
 
 def obter_historico(tipo):
-    receitas_text = "RECEITAS:\n"
     despesas_text = "DESPESAS:\n"
+    receitas_text = "RECEITAS:\n"
     
-    if tipo == "receitas" or tipo == "todos":
+    if tipo == "receitas" :
+        
+
         for item in bancoDados["receitas"]:
             receitas_text += f"  tipo: {item['tipo']} | valor: R${item['valor']:.2f} | data: {item['data']}\n"
+        
+
     
-    if tipo == "despesas" or tipo == "todos":
+    if tipo == "despesas" :
+        despesas_text = "DESPESAS:\n"
+        for item in bancoDados["despesas"]:
+            despesas_text += f"  tipo: {item['tipo']} | valor: R${item['valor']:.2f} | data: {item['data']}\n"
+
+    if tipo == "todos":
+        
+
+        for item in bancoDados["receitas"]:
+            receitas_text += f"  tipo: {item['tipo']} | valor: R${item['valor']:.2f} | data: {item['data']}\n"
+
+
         for item in bancoDados["despesas"]:
             despesas_text += f"  tipo: {item['tipo']} | valor: R${item['valor']:.2f} | data: {item['data']}\n"
     
@@ -107,7 +122,7 @@ def mostrar_saldo():
 bancoDados = lendo_documento_()
 
 # Inicializar CustomTkinter
-ctk.set_appearance_mode("light")  # "light" ou "dark"
+ctk.set_appearance_mode("dark")  # "light" ou "dark"
 ctk.set_default_color_theme("blue")  # Tema padrão
 
 root = ctk.CTk()

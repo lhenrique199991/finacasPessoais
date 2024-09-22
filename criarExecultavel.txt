@@ -1,3 +1,0 @@
-pyinstaller --onefile --windowed nomeArquivo.py
-
-(caminho para criar execultavel, com antivirus desligado)
